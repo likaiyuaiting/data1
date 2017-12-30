@@ -1,0 +1,67 @@
+C 语言多上机
+C++ 多总结
+数据结构 多想
+
+
+课前预习
+
+线性表
+栈和队列
+二叉树
+huffman 
+搜索树
+哈希
+排序
+图
+
+
+为什么学习编程？？
+解决问题，买尿布，养家庭 g
+	问题分析————》数据规模————》建立数学模型————》算法————》编程————》测试
+
+什么是数据结构
+	数据：1 2 3 4 5 6 数值数据
+		 文字数据，视频数据，图片数据    .bmp(位图)
+	看课件
+
+	
+1+2+3+...+N   公式/for循环/递归
+斐波那契数列第N项  递归/for循环
+
+空间复杂度/时间复杂度
+	时间复杂度：用某一条语句执行数来衡量：f(n)=n^2+2*n+10.（CPU不同或者当前执行的算法不唯一是，程序执行时间是不同的，不用程序执行时间来表示时间复杂度）
+				渐进表示法:例：O(n^2)，
+				
+		二分查找:O(lgN)
+			int BinarySearch(int*array,int size,int data);
+			[left,right)/[left,right]
+			时间复杂度：2^m=N;-->O(lgN)
+		二叉搜索树：O(log2^N)
+		多(m)叉搜索树：O(logm^N)
+		递归函数:O(N+m):m是函数中参与递归函数中语句，N为递归次数
+		
+	空间复杂度：算法中总共创建对象的个数
+		合并2个升序有序的数组元素int *Merge(int* array1,int size1,int* array,int size2)
+		int* Merge(int* array1, int size1, int* array2, int size2)
+		{
+			int len1 = 0;
+			int len2 = 0;
+			int k = 0;
+			int* array = new int[size1 + size2];
+			while ((len1<size1) && len2<size2)
+			{
+				array[k++] = (array1[len1]<array2[len2] ? array1[len1++] : array2[len2++]);
+			}
+			if (len1)
+			while (len1<size1)
+				array[k++] = array1[len1++];
+			if (len2)
+			while (len2<size2)
+				array[k++] = array2[len2++];
+		return array;
+		}
+	
+	作业：
+		斐波拉契数列时间复杂度，空间复杂度，咋优化
+		
+		
