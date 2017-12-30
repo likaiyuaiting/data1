@@ -1,0 +1,108 @@
+一。yum用法
+    yum list | grep vim(查找软件包)
+    （安装）yum strall 包名
+	
+	（卸载）yum remove 包名
+二。gcc
+	gcc main.c(编译程序)
+	gcc main.c  -o 指定文件的名字
+	(gcc main.c -o main)
+	
+	chmod +x hehe.c  //加权限（可执行）
+	chmod -x hehe.c  //减权限
+	
+	umane -a  //查看liunx的版本
+	
+	
+	main.c(键盘Esc键)
+	
+	
+	gcc main.c -E -o main.i（shift + g:跳转到行末）
+	预处理(**.i)
+	宏替换，注释去除，头文件的包含，预处理
+	
+	gcc -S main.i -o main.s (X86平台)
+	编译(**.s)
+	词法。语法，语义分析，符号汇总 生成中间代码
+	
+	gcc -c main.s -o main.o
+	汇编(**.o)
+	目标代码生成   汇总符号表，
+	不能直接运行：是二进制文件，
+	
+	gcc main.o 
+	链接
+	（编译模式的确定）
+	合并段表，符号表的合并和符号表的重定位（relocatable）
+	
+	
+	ldd  main.c (查看运行时的库依赖)
+	
+	histray(查看历史指令记录)
+	
+三。-gdb
+
+	debug/reless
+	debug:保留调试信息
+	
+	gcc -g quick_sort.c -o quick_sort
+	
+	（gdb）:进入调试
+	（gdb） break 81/(gdb) b 81:第81行打断点
+	（gdb）info b:查看断点
+	（gdb）del 2:去掉第二个断点
+	（gdb）b 函数名：给函数名出打断点
+	（gdb） r:跑到断点处
+	(gdb) q(quick):退出
+	（gdb）n(next)单步执行
+	 (gdb) print 函数名（函数名首元素） 
+	 （gdb）end
+ 	（gdb）c (continue) 跳到下一个断点，没有回一直执行到程序结束
+	（gdb） s:进入函数
+	（gdb） b(backtrace):看函数战争
+	 (gdb) f 1:如果想查看main函数当前局部变量的值也可以做到，先用frame命令（简写为f）选择1号栈帧然后
+再查看局部变量
+
+
+
+gdb基本命令：
+	bt（backtrace） :查看各级函数调用及参数
+	finish          ：连续运行到当前函数返回为止，然后停下来等待命令
+	f(frame)        :选择栈帧
+	i(info) locals  :查看当前栈帧局部变量的值
+	l(list)		    :列出源代码，接着上次的位置往下列每次列10行
+	list 行号	    ：列出从第几行开始的源代码
+	list			：
+	n(next)			：执行下一行语句
+	p(print)		：打印表达式的值，通过表达式可以修改变量的值或调用函数
+	q(quit)			：退出gdb调试环境
+	set var			：修改变量的值
+	start			：开始执行程序，停在main函数第一行语句前面等待命令
+	s(step)			：执行在下一条语句，如果有函数调用则进入到函数中
+	函数名（函数名首元素）      :列出某个函数的源代码
+	b(break) 行号   			：在某行设置断点
+	break 函数名（函数名首元素）：在某个函数开头设置断点
+	break ... if ...			：设置条件断点
+	c(continue) 				：从当前位置开始连续运行程序带第一个断点处
+	delete breakpoints 断点号	：删除断点
+	display 变量名				：跟踪查看某个变量，每次停下来都显示它的值
+	display breakpoints 断点号	：禁用断点
+	enable 断点号				：启用断点
+	(i)info breakpoints			：查看当前设置了哪些断点
+	r(run)						：从头开始连续运行程序
+	nudisplay 跟踪显示号		：取消跟踪显示
+	watch						：设置观察点
+	i(info) watchpoints			：查看当前设置了哪些观察点
+	x							：从某个位置开始打印存储单元的内容，全部当成字节来看，而不区分哪个字节属于哪个变量
+	
+	装pdb>>>>>
+	
+四，makefile的学习
+	
+	.PHONY:clean
+	clean:
+	  rm .......(中间生成文件)
+	  作业：编写一个有颜色的进度条
+			冯诺依曼结构？？
+			递归写二分查找
+			循环引用
