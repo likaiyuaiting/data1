@@ -1,0 +1,51 @@
+文件中保存迷宫信息
+	行号row,列号lor,入口，
+	如何动态申请/释放二维数组空间
+
+	
+动态的给出地图，利用vector
+
+111  123
+111	 894
+111	 765
+算法思想：先让其全为1，按照右下左上遍历，用当前值去修改下一次的值
+		[x][y]==1时。先修改[x][y]=[x][y]+1,右 下 左 上 进行遍历，
+		出口为它的前后左右都没有1，
+void fun(int array[][3],int row,int cor)
+{
+	int x=0,y=0;
+	//if(ifend(array,row,cor))
+	//return ;
+	while(array[x][y]==1)
+	{
+		//right
+		if(y+1<cor&&array[x][y+1]==1)
+		{
+			array[x][y]+=1;
+			y+1;
+		}
+		//down;
+		else if(x+1<row&&array[x+1][y]==1)
+		{
+			array[x][y]+=1;
+			x+1;
+		}
+		//left;
+		else if(y-1>=0&&array[x-1][y]==1)
+		{
+			array[x][y]+=1;
+			y-=1;
+		}
+		//up;
+		else
+		{
+			array[x][y]+=1;
+			x-=1;
+		}
+	}
+}
+
+
+迷宫多条路径中找出最短路径<栈>
+
+
