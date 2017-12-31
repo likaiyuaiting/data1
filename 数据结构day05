@@ -1,0 +1,62 @@
+入口检测entry（）
+	1，迷宫边界 2，通路
+下一步是否可以走通IsNextPass（）
+
+当前是否可以走通IsPass（）
+
+
+用栈可以将递归变成循环
+	链表的逆序打印
+	void printList(pNode pHead)
+	{
+		if(pHead)
+		{
+			printList(pHead->nest);
+			cout<<pHead->data<<"  ";
+		}
+	}
+	
+栈和队列的面试题（课件）
+
+队列
+	FIFO；
+	顺序存储结构
+		1.PUSH：插入到顺序表的后面
+		  POP：大量搬移元素
+		2.POP：移动头，
+		3.循环队列
+			判断存储满
+			判断空队列
+			@1：少用一个空间
+				front==rear：空
+				front==（rear+1）%空间大小：满
+			@2：给一个标记
+				front==rear：flag==true：满
+							 flag==false;空
+			@3：count方法
+				count==0：空
+				count==size：满
+	
+	链式存储结构
+		对头—->链表头
+		队尾-->链表尾
+	双端队列
+	
+	
+队列面试题
+
+
+矩阵
+	对称矩阵
+		a[i][j]==a[j][i]
+		方阵
+		下三角/上三角
+		存储在一维数组中
+		还原矩阵
+		
+		
+		
+		
+		
+		
+		
