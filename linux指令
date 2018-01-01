@@ -1,0 +1,55 @@
+ls   ----list列出当前目录下的文件
+cd   ----change directroy 改变目录
+..   上一级目录
+.    当前目录
+pwd   print work directory--打印工作目录
+vim    高级的编辑器
+	三种模式
+		普通模式
+	i   插入模式
+		命令行模式
+		按ESC可以由插入模式退出到普通模式
+		shift+ :      ---->命令行模式
+		wq  写并且退出
+		w 写
+		q 退出
+		
+		
+gcc 是C语言的编译器
+	gcc test.c      -----a.out可执行程序
+	./a.out
+	
+	gcc test.c -o test
+	
+	
+	
+rm ---remove
+
+rm -f a.out
+
+
+gcc -E test.c -o test.i      --预处理器处理
+//使用预处理器对源文件进行文本操作
+#include
+#define 标识符
+#define 宏
+注释
+
+gcc -S test.c                    ---> test.s
+//编译
+
+gcc -c test.s                    --->test.o
+//汇编
+
+
+gcc test.o                       --->可执行程序
+
+
+
+/usr/include/stdio.h
+
+
+
+
+
+
